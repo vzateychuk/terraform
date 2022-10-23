@@ -23,8 +23,8 @@ resource "aws_instance" "my-tomcat" {
   instance_type = var.instance_type
 
   tags = {
-    Name = "Terraf-EC2",
-    Step = "Variable and output use",
+    Name = "Terrf-ChangeName",
+    Step = "Change instance name",
     ENV = "DEV"
   }
 }
