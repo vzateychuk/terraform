@@ -18,7 +18,7 @@ provider "aws" {
   region = "eu-central-1"
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "my-tomcat" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
 
