@@ -18,12 +18,17 @@ provider "aws" {
   region = "eu-central-1"
 }
 
-resource "aws_instance" "my-tomcat" {
+resource "aws_s3_bucket" "terraform_course_vez" {
+  bucket = "vzateychuk-terraform-20220826"
+  acl = "public-read"
+}
+
+resource "aws_instance" "blog" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
 
   tags = {
-    Name = "Terrf-ChangeName",
+    Name = "Terraform",
     Step = "Change instance name",
     ENV = "DEV"
   }
